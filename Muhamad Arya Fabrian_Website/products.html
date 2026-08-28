@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarbonMarket — Explore verified carbon credit portfolios and environmental offset products.">
+    <title>Products Marketplace — CarbonMarket</title>
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="lib/Animate On Scroll v2.3.2/dist/aos.css">
+    <!-- Fancybox v5 Lightbox CSS -->
+    <link rel="stylesheet" href="lib/Fancybox v5.0.36/dist/fancybox/fancybox.css">
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="lib/swiperjs v11.1.5/swiper-bundle.min.css">
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="lib/boxicons v2.1.4/css/boxicons.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function () {
+            var u = localStorage.getItem('cm_current_user') || sessionStorage.getItem('cm_current_user');
+            if (u) document.write('<style>.nav-right { visibility: hidden; }</style>');
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">CM</a>
+            <span class="divider"></span>
+            <ul class="nav-links">
+                <li class="nav-item" data-menu="products"><a href="products.html" class="active">Products</a></li>
+                <li class="nav-item" data-menu="projects"><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#explanation">How It Works</a></li>
+                <li><a href="index.html#content">About Us</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="login.html" class="btn-login">Log In</a>
+            <a href="register.html" class="btn-register">Register</a>
+        </div>
+    </nav>
+
+    <!-- ================= PRODUCTS MARKETPLACE GRID ================= -->
+    <section class="products-section">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            
+            <!-- Category Filter Bar -->
+            <div class="products-filter-bar" data-aos="fade-up" data-aos-duration="900">
+                <button class="products-filter-btn active" data-category="all">All Categories</button>
+                <button class="products-filter-btn" data-category="forestry">Forestry & Peatland</button>
+                <button class="products-filter-btn" data-category="renewable">Renewable Energy</button>
+                <button class="products-filter-btn" data-category="blue-carbon">Blue Carbon & Mangrove</button>
+            </div>
+
+            <!-- Maria Joao Abrantes Style Card Grid -->
+            <div class="mja-card-grid" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+                
+                <!-- Product Card 1 (Lavender/Purple) -->
+                <div class="mja-card mja-card-purple" data-category="forestry">
+                    <div class="mja-card-left">
+                        <div class="mja-pills">
+                            <span class="mja-pill">Forestry & Peatland</span>
+                            <span class="mja-pill">Verra VCS #1428</span>
+                        </div>
+                        <h2 class="mja-card-title">Kalimantan Peatland Credit</h2>
+                        <p class="mja-card-desc">Protecting tropical peat swamp forests and restoring biodiversity in Central Kalimantan.</p>
+                    </div>
+
+                    <div class="mja-vertical-divider"></div>
+
+                    <div class="mja-card-right">
+                        <ul class="mja-feature-list">
+                            <li><i class="bx bxs-check-circle"></i> Protects 150,000+ ha tropical peat forest</li>
+                            <li><i class="bx bxs-check-circle"></i> High-density carbon sequestration</li>
+                            <li><i class="bx bxs-check-circle"></i> Funds indigenous community wildlife patrols</li>
+                        </ul>
+                        <div class="mja-card-footer-row">
+                            <div class="mja-card-price" style="font-size: 0.95rem; font-weight: 700; color: #087F5B;"><i class="bx bx-check-shield"></i> Verified Impact</div>
+                            <a href="product-detail.html?id=kalimantan" class="mja-btn-action">Explore Product →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 (Butter Yellow) -->
+                <div class="mja-card mja-card-yellow" data-category="renewable">
+                    <div class="mja-card-left">
+                        <div class="mja-pills">
+                            <span class="mja-pill">Renewable Energy</span>
+                            <span class="mja-pill">Gold Standard #892</span>
+                        </div>
+                        <h2 class="mja-card-title">Sulawesi Wind Energy Credit</h2>
+                        <p class="mja-card-desc">Clean wind turbine power grid displacing fossil fuel electricity in South Sulawesi.</p>
+                    </div>
+
+                    <div class="mja-vertical-divider"></div>
+
+                    <div class="mja-card-right">
+                        <ul class="mja-feature-list">
+                            <li><i class="bx bxs-check-circle"></i> 70MW clean wind energy capacity</li>
+                            <li><i class="bx bxs-check-circle"></i> Avoids 120,000+ tonnes grid CO₂ emissions</li>
+                            <li><i class="bx bxs-check-circle"></i> Real-time IoT telemetric validation</li>
+                        </ul>
+                        <div class="mja-card-footer-row">
+                            <div class="mja-card-price" style="font-size: 0.95rem; font-weight: 700; color: #087F5B;"><i class="bx bx-check-shield"></i> Verified Impact</div>
+                            <a href="product-detail.html?id=sulawesi" class="mja-btn-action">Explore Product →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 (Mint Green) -->
+                <div class="mja-card mja-card-mint" data-category="blue-carbon">
+                    <div class="mja-card-left">
+                        <div class="mja-pills">
+                            <span class="mja-pill">Blue Carbon</span>
+                            <span class="mja-pill">Plan Vivo Standard</span>
+                        </div>
+                        <h2 class="mja-card-title">Java Mangrove Blue Credit</h2>
+                        <p class="mja-card-desc">Restoring coastal mangrove wetlands for dense carbon storage and coastal defense.</p>
+                    </div>
+
+                    <div class="mja-vertical-divider"></div>
+
+                    <div class="mja-card-right">
+                        <ul class="mja-feature-list">
+                            <li><i class="bx bxs-check-circle"></i> High-capacity blue carbon storage</li>
+                            <li><i class="bx bxs-check-circle"></i> Natural storm surge & erosion defense</li>
+                            <li><i class="bx bxs-check-circle"></i> Supports coastal fishing community jobs</li>
+                        </ul>
+                        <div class="mja-card-footer-row">
+                            <div class="mja-card-price" style="font-size: 0.95rem; font-weight: 700; color: #087F5B;"><i class="bx bx-check-shield"></i> Verified Impact</div>
+                            <a href="product-detail.html?id=java" class="mja-btn-action">Explore Product →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 (Sky Blue) -->
+                <div class="mja-card mja-card-blue" data-category="renewable">
+                    <div class="mja-card-left">
+                        <div class="mja-pills">
+                            <span class="mja-pill">Renewable Energy</span>
+                            <span class="mja-pill">Biomass Microgrid</span>
+                        </div>
+                        <h2 class="mja-card-title">Solar & Biomass Power Credit</h2>
+                        <p class="mja-card-desc">Solar microgrids and agricultural waste biomass power for remote rural communities.</p>
+                    </div>
+
+                    <div class="mja-vertical-divider"></div>
+
+                    <div class="mja-card-right">
+                        <ul class="mja-feature-list">
+                            <li><i class="bx bxs-check-circle"></i> Clean solar microgrids for 25+ villages</li>
+                            <li><i class="bx bxs-check-circle"></i> Converts agricultural crop residue to power</li>
+                            <li><i class="bx bxs-check-circle"></i> Promotes rural electrification & job growth</li>
+                        </ul>
+                        <div class="mja-card-footer-row">
+                            <div class="mja-card-price" style="font-size: 0.95rem; font-weight: 700; color: #087F5B;"><i class="bx bx-check-shield"></i> Verified Impact</div>
+                            <a href="product-detail.html?id=bali" class="mja-btn-action">Explore Product →</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col footer-brand">
+                <a href="index.html" class="footer-logo">CM</a>
+                <p class="footer-tagline">Verified carbon credit trading solutions for a more sustainable future.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html#explanation">How It Works</a></li>
+                    <li><a href="index.html#content">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Account</h4>
+                <ul class="footer-links">
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="history.html">Activity & History</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CarbonMarket. All rights reserved &mdash; Contributing to a better planet.</p>
+        </div>
+    </footer>
+
+    <!-- Local Libraries Scripts -->
+    <script src="lib/jquery v3.7.1/jquery-3.7.1.min.js"></script>
+    <script src="lib/gsap/minified/gsap.min.js"></script>
+    <script src="lib/Fancybox v5.0.36/dist/fancybox/fancybox.umd.js"></script>
+    <script src="lib/Animate On Scroll v2.3.2/dist/aos.js"></script>
+    <script src="lib/swiperjs v11.1.5/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

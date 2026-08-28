@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verified Carbon Credit Product Detail & Direct Purchase — CarbonMarket">
+    <title>Product Detail & Purchase — CarbonMarket</title>
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="lib/Animate On Scroll v2.3.2/dist/aos.css">
+    <!-- Fancybox v5 Lightbox CSS -->
+    <link rel="stylesheet" href="lib/Fancybox v5.0.36/dist/fancybox/fancybox.css">
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="lib/swiperjs v11.1.5/swiper-bundle.min.css">
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="lib/boxicons v2.1.4/css/boxicons.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function () {
+            var u = localStorage.getItem('cm_current_user') || sessionStorage.getItem('cm_current_user');
+            if (u) document.write('<style>.nav-right { visibility: hidden; }</style>');
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">CM</a>
+            <span class="divider"></span>
+            <ul class="nav-links">
+                <li class="nav-item" data-menu="products"><a href="products.html" class="active">Products</a></li>
+                <li class="nav-item" data-menu="projects"><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#explanation">How It Works</a></li>
+                <li><a href="index.html#content">About Us</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="login.html" class="btn-login">Log In</a>
+            <a href="register.html" class="btn-register">Register</a>
+        </div>
+    </nav>
+
+    <!-- ================= PRODUCT DETAIL & PURCHASE CONTENT ================= -->
+    <section style="padding: 120px 8% 100px 8%; background-color: #F9FBF9; min-height: 100vh;">
+        <div style="max-width: 1160px; margin: 0 auto;">
+            
+            <!-- Breadcrumb -->
+            <div style="margin-bottom: 24px; font-size: 0.85rem; color: #64748B;" data-aos="fade-up" data-aos-duration="800">
+                <a href="index.html" style="color: #64748B; text-decoration: none;">Home</a> &nbsp;/&nbsp; 
+                <a href="products.html" style="color: #64748B; text-decoration: none;">Products</a> &nbsp;/&nbsp; 
+                <span id="prod-breadcrumb-title" style="color: #111111; font-weight: 600;">Kalimantan Peatland Credit</span>
+            </div>
+
+            <!-- Global Alert Box -->
+            <div id="buy-alert-box" style="display: none; max-width: 800px; margin: 0 auto 30px auto; padding: 14px 20px; border-radius: 14px; font-weight: 700; text-align: center; font-size: 0.95rem;"></div>
+
+            <!-- 2-Column Product Layout (Product Specs Left + Purchase Buy Box Right) -->
+            <div style="display: flex; gap: 50px; align-items: flex-start; flex-wrap: wrap;">
+                
+                <!-- Left Product Image & Overview (60%) -->
+                <div style="flex: 1.4; min-width: 320px;" data-aos="fade-up" data-aos-duration="900">
+                    <div style="border-radius: 24px; overflow: hidden; border: 1.5px solid #111111; box-shadow: 0 12px 30px rgba(0,0,0,0.05); margin-bottom: 30px; height: 360px;">
+                        <img id="prod-img" src="assets/img/project-1.jpg" alt="Product Image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
+                    <span id="prod-badge" style="font-size: 0.78rem; font-weight: 700; color: #087F5B; background: #E8F5EF; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-bottom: 12px;"><i class="bx bx-check-shield"></i> Verified Carbon Credit</span>
+                    <h1 id="prod-title" style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; color: #111111; line-height: 1.2; letter-spacing: -0.03em; margin-bottom: 16px;">Kalimantan Peatland Credit</h1>
+                    <p id="prod-desc" style="font-size: 1.05rem; color: #475569; line-height: 1.75; margin-bottom: 30px;">Certified high-density carbon credits issued from peat swamp forest conservation in Central Kalimantan. Each credit represents 1 metric tonne of CO₂ equivalent permanently offset.</p>
+
+                    <!-- Features Checklist -->
+                    <div style="background: #ffffff; border: 1.5px solid #111111; border-radius: 20px; padding: 24px; margin-bottom: 30px;">
+                        <h3 style="font-size: 1.1rem; font-weight: 700; color: #111111; margin-bottom: 14px;">Key Product Specifications</h3>
+                        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: #334155;">
+                            <li style="display: flex; align-items: center; gap: 10px;"><i class="bx bxs-check-circle" style="color: #087F5B; font-size: 1.2rem;"></i> <span id="prod-spec1">Certified under Verra VCS Registry Standard</span></li>
+                            <li style="display: flex; align-items: center; gap: 10px;"><i class="bx bxs-check-circle" style="color: #087F5B; font-size: 1.2rem;"></i> <span id="prod-spec2">Serialized Retire Certificate issued upon purchase</span></li>
+                            <li style="display: flex; align-items: center; gap: 10px;"><i class="bx bxs-check-circle" style="color: #087F5B; font-size: 1.2rem;"></i> <span id="prod-spec3">Audited by independent third-party DNV & SGS</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Purchase Buy Box (40%) -->
+                <div style="flex: 1; min-width: 300px;" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+                    <div style="background: #ffffff; border: 1.5px solid #111111; border-radius: 24px; padding: 32px; box-shadow: 0 14px 35px rgba(0,0,0,0.06); position: sticky; top: 120px;">
+                        
+                        <div style="margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid #F1F5F9;">
+                            <span style="font-size: 0.82rem; font-weight: 600; color: #64748B; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Market Unit Price</span>
+                            <div style="display: flex; align-items: baseline; gap: 8px;">
+                                <span id="prod-unit-price" style="font-size: 2.4rem; font-weight: 800; color: #087F5B;">$25.00</span>
+                                <span style="font-size: 0.95rem; font-weight: 600; color: #64748B;">/ tCO₂e</span>
+                            </div>
+                        </div>
+
+                        <!-- Quantity Selector Widget -->
+                        <div style="margin-bottom: 24px;">
+                            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #111111; margin-bottom: 8px;">Select Quantity (Metric Tonnes):</label>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <button id="qty-minus" type="button" style="width: 42px; height: 42px; border-radius: 10px; border: 1.5px solid #CBD5E1; background: #F8FAFC; font-size: 1.2rem; font-weight: 700; cursor: pointer;">-</button>
+                                <input type="number" id="detail-qty-input" min="1" max="5000" value="10" style="flex: 1; height: 42px; text-align: center; border-radius: 10px; border: 1.5px solid #CBD5E1; font-weight: 800; font-size: 1.1rem; outline: none;">
+                                <button id="qty-plus" type="button" style="width: 42px; height: 42px; border-radius: 10px; border: 1.5px solid #CBD5E1; background: #F8FAFC; font-size: 1.2rem; font-weight: 700; cursor: pointer;">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div style="background: #F8FAFC; padding: 18px; border-radius: 14px; margin-bottom: 24px; border: 1px solid #E2E8F0;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: #64748B; margin-bottom: 8px;">
+                                <span>Unit Price</span>
+                                <span id="summary-unit-price">$25.00</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: #64748B; margin-bottom: 12px;">
+                                <span>Offset Volume</span>
+                                <span id="summary-volume">10 tCO₂e</span>
+                            </div>
+                            <div style="height: 1px; background: #E2E8F0; margin-bottom: 12px;"></div>
+                            <div style="display: flex; justify-content: space-between; font-size: 1.1rem; font-weight: 800; color: #111111;">
+                                <span>Total Cost</span>
+                                <span id="summary-total" style="color: #087F5B;">$250.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Purchase Action Button -->
+                        <button id="btn-buy-product-detail" type="button" style="width: 100%; padding: 16px; background-color: #111111; color: #ffffff; font-weight: 800; font-size: 1rem; border: none; border-radius: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: background 0.25s ease;">
+                            <i class="bx bx-cart-alt" style="font-size: 1.2rem;"></i> Buy Carbon Credits
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col footer-brand">
+                <a href="index.html" class="footer-logo">CM</a>
+                <p class="footer-tagline">Verified carbon credit trading solutions for a more sustainable future.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html#explanation">How It Works</a></li>
+                    <li><a href="index.html#content">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Account</h4>
+                <ul class="footer-links">
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="history.html">Activity & History</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CarbonMarket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Library Scripts -->
+    <script src="lib/Animate On Scroll v2.3.2/dist/aos.js"></script>
+    <script src="js/index.js"></script>
+
+    <!-- Dynamic Product Detail Loader & Buying Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const productsDetailData = {
+                'kalimantan': {
+                    title: 'Kalimantan Peatland Credit',
+                    badge: '<i class="bx bx-check-shield"></i> Verra VCS Certified #1428',
+                    price: 25.00,
+                    image: 'assets/img/project-1.jpg',
+                    desc: 'Certified high-density carbon credits issued from peat swamp forest conservation in Central Kalimantan. Each credit represents 1 metric tonne of CO₂ equivalent permanently offset.',
+                    spec1: 'Certified under Verra VCS Registry Standard',
+                    spec2: 'Serialized Retire Certificate issued upon purchase',
+                    spec3: 'Audited by independent third-party DNV & SGS'
+                },
+                'sulawesi': {
+                    title: 'Sulawesi Wind Energy Credit',
+                    badge: '<i class="bx bx-badge-check"></i> Gold Standard Verified #892',
+                    price: 18.50,
+                    image: 'assets/img/project-2.jpg',
+                    desc: 'Clean wind turbine renewable energy credits from 70MW wind farm in South Sulawesi, displacing coal-fired grid power.',
+                    spec1: 'Gold Standard Certified for Climate & Development',
+                    spec2: 'Real-time SCADA IoT telemetry power validation',
+                    spec3: 'Direct displacement of regional coal grid emissions'
+                },
+                'java': {
+                    title: 'Java Mangrove Blue Credit',
+                    badge: '<i class="bx bx-shield-alt-2"></i> Plan Vivo Verified #304',
+                    price: 32.00,
+                    image: 'assets/img/mangrove.jpg',
+                    desc: 'High-density blue carbon credit units generated from coastal mangrove wetland restoration along the northern Central Java coastline.',
+                    spec1: 'Plan Vivo Standard Blue Carbon Certification',
+                    spec2: '4x higher sequestration rate than terrestrial forests',
+                    spec3: 'Supports coastal erosion defense & local fishing co-ops'
+                },
+                'bali': {
+                    title: 'Solar & Biomass Power Credit',
+                    badge: '<i class="bx bx-badge-check"></i> Gold Standard Verified #511',
+                    price: 14.50,
+                    image: 'assets/img/biomass.jpg',
+                    desc: 'Hybrid solar array and agricultural waste biomass power credits supplying clean energy for off-grid rural farming communities in Bali.',
+                    spec1: 'Gold Standard Agricultural Waste Energy Standard',
+                    spec2: 'Eliminates open agricultural residue burning',
+                    spec3: 'Provides clean solar electrification for 25+ villages'
+                }
+            };
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const prodId = urlParams.get('id') || 'kalimantan';
+            const data = productsDetailData[prodId] || productsDetailData['kalimantan'];
+
+            document.getElementById('prod-breadcrumb-title').textContent = data.title;
+            document.getElementById('prod-badge').innerHTML = data.badge;
+            document.getElementById('prod-title').textContent = data.title;
+            document.getElementById('prod-img').src = data.image;
+            document.getElementById('prod-desc').textContent = data.desc;
+            document.getElementById('prod-spec1').textContent = data.spec1;
+            document.getElementById('prod-spec2').textContent = data.spec2;
+            document.getElementById('prod-spec3').textContent = data.spec3;
+            document.getElementById('prod-unit-price').textContent = '$' + data.price.toFixed(2);
+            document.getElementById('summary-unit-price').textContent = '$' + data.price.toFixed(2);
+
+            const qtyInput = document.getElementById('detail-qty-input');
+            const summaryVol = document.getElementById('summary-volume');
+            const summaryTotal = document.getElementById('summary-total');
+            const minusBtn = document.getElementById('qty-minus');
+            const plusBtn = document.getElementById('qty-plus');
+
+            function updatePriceSummary() {
+                let qty = parseInt(qtyInput.value) || 1;
+                if (qty < 1) qty = 1;
+                qtyInput.value = qty;
+                summaryVol.textContent = qty + ' tCO₂e';
+                summaryTotal.textContent = '$' + (data.price * qty).toFixed(2);
+            }
+
+            qtyInput.addEventListener('input', updatePriceSummary);
+            minusBtn.addEventListener('click', () => {
+                let val = parseInt(qtyInput.value) || 1;
+                if (val > 1) { qtyInput.value = val - 1; updatePriceSummary(); }
+            });
+            plusBtn.addEventListener('click', () => {
+                let val = parseInt(qtyInput.value) || 1;
+                qtyInput.value = val + 1;
+                updatePriceSummary();
+            });
+
+            document.getElementById('btn-buy-product-detail').addEventListener('click', () => {
+                const alertBox = document.getElementById('buy-alert-box');
+                const currentUser = getCurrentUserSession();
+
+                if (!currentUser) {
+                    if (alertBox) {
+                        alertBox.style.display = 'block';
+                        alertBox.style.background = '#FEE2E2';
+                        alertBox.style.color = '#DC2626';
+                        alertBox.style.border = '1px solid #FCA5A5';
+                        alertBox.innerHTML = '<i class="bx bx-error-circle"></i> Please <strong><a href="login.html" style="color: #DC2626; text-decoration: underline;">Log In</a></strong> or <strong><a href="register.html" style="color: #DC2626; text-decoration: underline;">Register</a></strong> to buy carbon credits!';
+                        alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    return;
+                }
+
+                const qty = parseInt(qtyInput.value) || 1;
+                const totalPrice = (data.price * qty).toFixed(2);
+
+                const newOrder = {
+                    id: 'ORD-' + Math.floor(10000 + Math.random() * 90000),
+                    date: new Date().toISOString().split('T')[0],
+                    product: data.title,
+                    tons: qty,
+                    totalPrice: '$' + totalPrice,
+                    status: 'Completed & Verified',
+                    certificateId: 'CERT-2026-' + Math.floor(1000 + Math.random() * 9000)
+                };
+
+                const existingHistory = JSON.parse(localStorage.getItem('cm_purchase_history') || '[]');
+                existingHistory.unshift(newOrder);
+                localStorage.setItem('cm_purchase_history', JSON.stringify(existingHistory));
+
+                if (alertBox) {
+                    alertBox.style.display = 'block';
+                    alertBox.style.background = '#E8F5EF';
+                    alertBox.style.color = '#087F5B';
+                    alertBox.style.border = '1px solid #A7F3D0';
+                    alertBox.innerHTML = `<i class="bx bx-check-circle"></i> Purchase Successful! <strong>${qty} tCO₂e</strong> of <em>${data.title}</em> ($${totalPrice}) added to your portfolio! Redirecting to Dashboard...`;
+                    alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+
+                setTimeout(() => {
+                    window.location.href = 'history.html';
+                }, 1300);
+            });
+
+            updatePriceSummary();
+        });
+    </script>
+</body>
+
+</html>

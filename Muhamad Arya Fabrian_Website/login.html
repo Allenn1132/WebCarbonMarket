@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Log in to CarbonMarket platform">
+    <title>Log In — CarbonMarket</title>
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="lib/Animate On Scroll v2.3.2/dist/aos.css">
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="lib/boxicons v2.1.4/css/boxicons.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function () {
+            var u = localStorage.getItem('cm_current_user') || sessionStorage.getItem('cm_current_user');
+            if (u) document.write('<style>.nav-right { visibility: hidden; }</style>');
+        })();
+    </script>
+</head>
+
+<body style="background-color: #F9FBF9;">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">CM</a>
+            <span class="divider"></span>
+            <ul class="nav-links">
+                <li class="nav-item" data-menu="products"><a href="products.html">Products</a></li>
+                <li class="nav-item" data-menu="projects"><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#explanation">How It Works</a></li>
+                <li><a href="index.html#content">About Us</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="login.html" class="btn-login" style="background-color: #E8F5EF; color: #087F5B;">Log In</a>
+            <a href="register.html" class="btn-register">Register</a>
+        </div>
+    </nav>
+
+    <!-- ================= LOGIN FORM CONTAINER ================= -->
+    <section style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 120px 5% 60px 5%;">
+        <div style="max-width: 440px; width: 100%; background: #ffffff; padding: 42px; border-radius: 24px; border: 1px solid #E2E8F0; box-shadow: 0 15px 35px rgba(0,0,0,0.04);" data-aos="fade-up" data-aos-duration="900">
+            
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h1 style="font-size: 1.6rem; font-weight: 800; color: #111111; letter-spacing: -0.025em; margin-bottom: 6px;">Welcome Back</h1>
+                <p style="font-size: 0.9rem; color: #64748B;">Log in to manage your carbon credit portfolio.</p>
+            </div>
+
+            <!-- Alert Message Box -->
+            <div id="auth-alert" style="display: none; background: #E8F5EF; color: #087F5B; padding: 12px 16px; border-radius: 12px; margin-bottom: 20px; font-size: 0.9rem; font-weight: 700; text-align: center; border: 1px solid #A7F3D0;"></div>
+
+            <form id="login-form">
+                <div style="margin-bottom: 20px;">
+                    <label for="email" style="display: block; font-size: 0.85rem; font-weight: 600; color: #111111; margin-bottom: 8px;">Email Address</label>
+                    <div style="position: relative;">
+                        <i class="bx bx-envelope" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #94A3B8; font-size: 1.1rem;"></i>
+                        <input type="email" id="email" required placeholder="name@company.com" style="width: 100%; padding: 12px 14px 12px 42px; border-radius: 12px; border: 1.5px solid #CBD5E1; font-size: 0.95rem; color: #111111; outline: none;">
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label for="password" style="font-size: 0.85rem; font-weight: 600; color: #111111;">Password</label>
+                        <a href="#" style="font-size: 0.8rem; color: #087F5B; text-decoration: none; font-weight: 600;">Forgot Password?</a>
+                    </div>
+                    <div style="position: relative;">
+                        <i class="bx bx-lock-alt" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #94A3B8; font-size: 1.1rem;"></i>
+                        <input type="password" id="password" required placeholder="••••••••" style="width: 100%; padding: 12px 14px 12px 42px; border-radius: 12px; border: 1.5px solid #CBD5E1; font-size: 0.95rem; color: #111111; outline: none;">
+                    </div>
+                </div>
+
+                <button type="submit" style="width: 100%; padding: 14px; background-color: #111111; color: #ffffff; font-weight: 700; font-size: 0.95rem; border: none; border-radius: 14px; cursor: pointer; transition: background 0.25s ease;">Log In to Dashboard &rarr;</button>
+            </form>
+
+            <div style="text-align: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid #F1F5F9; font-size: 0.9rem; color: #64748B;">
+                Don't have an account? <a href="register.html" style="color: #087F5B; font-weight: 700; text-decoration: none;">Register Here</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Local Libraries Scripts -->
+    <script src="lib/Animate On Scroll v2.3.2/dist/aos.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        if (typeof AOS !== 'undefined') AOS.init({ duration: 900, once: true });
+
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const alertBox = document.getElementById('auth-alert');
+
+            if (!email || !password) return;
+
+            const users = getRegisteredUsers();
+            const matchedUser = users.find(u => u.email.toLowerCase() === email.toLowerCase() && u.password === password);
+
+            if (matchedUser) {
+                saveUserSession(matchedUser, true);
+
+                alertBox.style.display = 'block';
+                alertBox.style.background = '#E8F5EF';
+                alertBox.style.color = '#087F5B';
+                alertBox.style.borderColor = '#A7F3D0';
+                alertBox.innerHTML = '<i class="bx bx-check-circle"></i> Login Successful! Redirecting to Dashboard...';
+
+                setTimeout(() => {
+                    window.location.href = 'history.html';
+                }, 1000);
+            } else {
+                alertBox.style.display = 'block';
+                alertBox.style.background = '#FEE2E2';
+                alertBox.style.color = '#DC2626';
+                alertBox.style.borderColor = '#FCA5A5';
+                alertBox.innerHTML = '<i class="bx bx-error-circle"></i> Invalid email or password!';
+            }
+        });
+    </script>
+</body>
+
+</html>

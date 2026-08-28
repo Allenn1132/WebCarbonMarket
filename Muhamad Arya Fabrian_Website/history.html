@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Portfolio & Carbon Offset Impact Dashboard — CarbonMarket">
+    <title>Impact Dashboard & Activity — CarbonMarket</title>
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="lib/Animate On Scroll v2.3.2/dist/aos.css">
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="lib/boxicons v2.1.4/css/boxicons.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function () {
+            var u = localStorage.getItem('cm_current_user') || sessionStorage.getItem('cm_current_user');
+            if (u) document.write('<style>.nav-right { visibility: hidden; }</style>');
+        })();
+    </script>
+</head>
+
+<body style="background-color: #F9FBF9;">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">CM</a>
+            <span class="divider"></span>
+            <ul class="nav-links">
+                <li class="nav-item" data-menu="products"><a href="products.html">Products</a></li>
+                <li class="nav-item" data-menu="projects"><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#explanation">How It Works</a></li>
+                <li><a href="index.html#content">About Us</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="login.html" class="btn-login">Log In</a>
+            <a href="register.html" class="btn-register">Register</a>
+        </div>
+    </nav>
+
+    <!-- ================= USER IMPACT DASHBOARD ================= -->
+    <section style="padding: 130px 8% 100px 8%; min-height: 100vh;">
+        <div style="max-width: 1180px; margin: 0 auto;">
+            
+            <!-- User Profile Header Banner (Bespoke Editorial Style) -->
+            <div style="background: #ffffff; border: 1.5px solid #111111; border-radius: 28px; padding: 36px; margin-bottom: 40px; box-shadow: 0 12px 36px rgba(0,0,0,0.04); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
+                <div style="display: flex; align-items: center; gap: 20px;">
+                    <div style="width: 64px; height: 64px; border-radius: 20px; background: #087F5B; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 800; border: 2px solid #111111;">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div>
+                        <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 6px; flex-wrap: wrap;">
+                            <span style="font-size: 0.78rem; font-weight: 700; color: #087F5B; background: #E8F5EF; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em;"><i class="bx bx-check-shield"></i> Verified Offset Account</span>
+                            <span id="user-email-badge" style="font-size: 0.8rem; color: #64748B; font-weight: 500;">user@carbonmarket.com</span>
+                        </div>
+                        <h1 id="user-dashboard-title" style="font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 800; color: #111111; letter-spacing: -0.03em;">Welcome Back to Your Portfolio</h1>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="products.html" style="padding: 12px 22px; background-color: #111111; color: #ffffff; font-weight: 700; font-size: 0.88rem; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.2s ease;">
+                        <i class="bx bx-plus-circle"></i> Buy Carbon Credits
+                    </a>
+                    <a href="projects.html" style="padding: 12px 22px; background-color: #F1F5F9; color: #111111; font-weight: 700; font-size: 0.88rem; border-radius: 50px; text-decoration: none; border: 1.5px solid #111111; display: inline-flex; align-items: center; gap: 8px;">
+                        <i class="bx bx-globe"></i> Browse Projects
+                    </a>
+                </div>
+            </div>
+
+            <!-- Impact Overview Cards Grid (MJA Styled Pastel Colors) -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 44px;">
+                
+                <!-- Stat Card 1 (Forest Green Accent) -->
+                <div style="background: #E8F5EF; border: 1.5px solid #111111; border-radius: 24px; padding: 28px; position: relative; overflow: hidden;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                        <span style="font-size: 0.82rem; font-weight: 700; color: #087F5B; text-transform: uppercase; letter-spacing: 0.05em;">Total Net CO₂ Offsetted</span>
+                        <i class="bx bx-leaf" style="font-size: 1.6rem; color: #087F5B;"></i>
+                    </div>
+                    <div style="font-size: 2.6rem; font-weight: 800; color: #111111; line-height: 1.1; margin-bottom: 12px;">
+                        <span id="stat-total-tons">45.0</span> <span style="font-size: 1rem; font-weight: 700; color: #475569;">tCO₂e</span>
+                    </div>
+                    <div style="font-size: 0.84rem; color: #334155; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                        <i class="bx bx-tree" style="color: #087F5B;"></i> Equivalent to <strong id="stat-trees-count" style="color: #111111;">~2,250 trees</strong> planted
+                    </div>
+                </div>
+
+                <!-- Stat Card 2 (Butter Yellow Accent) -->
+                <div style="background: #FEF3C7; border: 1.5px solid #111111; border-radius: 24px; padding: 28px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                        <span style="font-size: 0.82rem; font-weight: 700; color: #B45309; text-transform: uppercase; letter-spacing: 0.05em;">Total Capital Invested</span>
+                        <i class="bx bx-wallet" style="font-size: 1.6rem; color: #B45309;"></i>
+                    </div>
+                    <div style="font-size: 2.6rem; font-weight: 800; color: #111111; line-height: 1.1; margin-bottom: 12px;">
+                        <span id="stat-total-spent">$1,100.00</span> <span style="font-size: 1rem; font-weight: 700; color: #475569;">USD</span>
+                    </div>
+                    <div style="font-size: 0.84rem; color: #334155; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                        <i class="bx bx-line-chart" style="color: #B45309;"></i> Avg cost: <strong id="stat-avg-cost" style="color: #111111;">$24.44 / tCO₂e</strong>
+                    </div>
+                </div>
+
+                <!-- Stat Card 3 (Sky Blue Accent) -->
+                <div style="background: #E0F2FE; border: 1.5px solid #111111; border-radius: 24px; padding: 28px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                        <span style="font-size: 0.82rem; font-weight: 700; color: #0369A1; text-transform: uppercase; letter-spacing: 0.05em;">Retired Certificates</span>
+                        <i class="bx bx-certification" style="font-size: 1.6rem; color: #0369A1;"></i>
+                    </div>
+                    <div style="font-size: 2.6rem; font-weight: 800; color: #111111; line-height: 1.1; margin-bottom: 12px;">
+                        <span id="stat-cert-count">3</span> <span style="font-size: 1rem; font-weight: 700; color: #475569;">Issued</span>
+                    </div>
+                    <div style="font-size: 0.84rem; color: #334155; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                        <i class="bx bx-check-double" style="color: #0369A1;"></i> 100% Verra & Gold Standard Audited
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Transaction History Table Container -->
+            <div style="background: #ffffff; border: 1.5px solid #111111; border-radius: 28px; padding: 36px; box-shadow: 0 12px 36px rgba(0,0,0,0.04);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; flex-wrap: wrap; gap: 16px;">
+                    <div>
+                        <h3 style="font-size: 1.3rem; font-weight: 800; color: #111111; letter-spacing: -0.02em;">Verified Credit Retirement Registry</h3>
+                        <p style="font-size: 0.88rem; color: #64748B; margin-top: 2px;">Official record of carbon credit certificates issued to your account.</p>
+                    </div>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #087F5B; background: #E8F5EF; padding: 6px 14px; border-radius: 20px; border: 1px solid #A7F3D0;"><i class="bx bx-shield-quarter"></i> Immutable Registry Ledger</span>
+                </div>
+                
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid #111111; color: #111111; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 800;">
+                                <th style="padding: 16px;">Product / Registry Standard</th>
+                                <th style="padding: 16px;">Offset Quantity</th>
+                                <th style="padding: 16px;">Transaction Date</th>
+                                <th style="padding: 16px;">Total Amount</th>
+                                <th style="padding: 16px;">Status</th>
+                                <th style="padding: 16px; text-align: right;">Audit Certificate</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-table-body" style="font-size: 0.95rem;">
+                            
+                            <!-- Initial Mock Row 1 -->
+                            <tr style="border-bottom: 1px solid #F1F5F9;">
+                                <td style="padding: 20px 16px;">
+                                    <strong style="color: #111111; font-size: 1rem; display: block; font-weight: 700;">Kalimantan Peatland Credit</strong>
+                                    <span style="font-size: 0.8rem; color: #64748B; font-weight: 500;">Verra VCS Standard • #VCS-1428</span>
+                                </td>
+                                <td style="padding: 20px 16px; font-weight: 800; color: #111111;">10 tCO₂e</td>
+                                <td style="padding: 20px 16px; color: #64748B; font-weight: 500;">28 Aug 2026</td>
+                                <td style="padding: 20px 16px; font-weight: 800; color: #087F5B;">$250.00</td>
+                                <td style="padding: 20px 16px;">
+                                    <span style="font-size: 0.78rem; font-weight: 700; color: #087F5B; background: #E8F5EF; padding: 4px 12px; border-radius: 20px; border: 1px solid #A7F3D0; display: inline-flex; align-items: center; gap: 6px;">
+                                        <i class="bx bxs-circle" style="font-size: 0.5rem; color: #087F5B;"></i> Active & Retired
+                                    </span>
+                                </td>
+                                <td style="padding: 20px 16px; text-align: right;">
+                                    <a href="#" onclick="alert('Downloading Official Verra Serialized Audit Certificate PDF...'); return false;" style="font-size: 0.82rem; font-weight: 700; color: #111111; text-decoration: none; background: #F1F5F9; border: 1.5px solid #111111; padding: 8px 16px; border-radius: 50px; display: inline-flex; align-items: center; gap: 6px;">
+                                        <i class="bx bx-download" style="font-size: 1rem;"></i> Certificate PDF
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <!-- Initial Mock Row 2 -->
+                            <tr style="border-bottom: 1px solid #F1F5F9;">
+                                <td style="padding: 20px 16px;">
+                                    <strong style="color: #111111; font-size: 1rem; display: block; font-weight: 700;">Sulawesi Wind Energy Credit</strong>
+                                    <span style="font-size: 0.8rem; color: #64748B; font-weight: 500;">Gold Standard Registry • #GS-892</span>
+                                </td>
+                                <td style="padding: 20px 16px; font-weight: 800; color: #111111;">20 tCO₂e</td>
+                                <td style="padding: 20px 16px; color: #64748B; font-weight: 500;">15 Aug 2026</td>
+                                <td style="padding: 20px 16px; font-weight: 800; color: #087F5B;">$370.00</td>
+                                <td style="padding: 20px 16px;">
+                                    <span style="font-size: 0.78rem; font-weight: 700; color: #087F5B; background: #E8F5EF; padding: 4px 12px; border-radius: 20px; border: 1px solid #A7F3D0; display: inline-flex; align-items: center; gap: 6px;">
+                                        <i class="bx bxs-circle" style="font-size: 0.5rem; color: #087F5B;"></i> Active & Retired
+                                    </span>
+                                </td>
+                                <td style="padding: 20px 16px; text-align: right;">
+                                    <a href="#" onclick="alert('Downloading Official Gold Standard Audit Certificate PDF...'); return false;" style="font-size: 0.82rem; font-weight: 700; color: #111111; text-decoration: none; background: #F1F5F9; border: 1.5px solid #111111; padding: 8px 16px; border-radius: 50px; display: inline-flex; align-items: center; gap: 6px;">
+                                        <i class="bx bx-download" style="font-size: 1rem;"></i> Certificate PDF
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <!-- Initial Mock Row 3 -->
+                            <tr>
+                                <td style="padding: 20px 16px;">
+                                    <strong style="color: #111111; font-size: 1rem; display: block; font-weight: 700;">Java Mangrove Blue Credit</strong>
+                                    <span style="font-size: 0.8rem; color: #64748B; font-weight: 500;">Plan Vivo Foundation • #PV-304</span>
+                                </td>
+                                <td style="padding: 20px 16px; font-weight: 800; color: #111111;">15 tCO₂e</td>
+                                <td style="padding: 20px 16px; color: #64748B; font-weight: 500;">02 Aug 2026</td>
+                                <td style="padding: 20px 16px; font-weight: 800; color: #087F5B;">$480.00</td>
+                                <td style="padding: 20px 16px;">
+                                    <span style="font-size: 0.78rem; font-weight: 700; color: #087F5B; background: #E8F5EF; padding: 4px 12px; border-radius: 20px; border: 1px solid #A7F3D0; display: inline-flex; align-items: center; gap: 6px;">
+                                        <i class="bx bxs-circle" style="font-size: 0.5rem; color: #087F5B;"></i> Active & Retired
+                                    </span>
+                                </td>
+                                <td style="padding: 20px 16px; text-align: right;">
+                                    <a href="#" onclick="alert('Downloading Official Plan Vivo Certificate PDF...'); return false;" style="font-size: 0.82rem; font-weight: 700; color: #111111; text-decoration: none; background: #F1F5F9; border: 1.5px solid #111111; padding: 8px 16px; border-radius: 50px; display: inline-flex; align-items: center; gap: 6px;">
+                                        <i class="bx bx-download" style="font-size: 1rem;"></i> Certificate PDF
+                                    </a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col footer-brand">
+                <a href="index.html" class="footer-logo">CM</a>
+                <p class="footer-tagline">Verified carbon credit trading solutions for a more sustainable future.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html#explanation">How It Works</a></li>
+                    <li><a href="index.html#content">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Account</h4>
+                <ul class="footer-links">
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="history.html">Activity & History</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CarbonMarket. All rights reserved &mdash; Contributing to a better planet.</p>
+        </div>
+    </footer>
+
+    <!-- Local Libraries Scripts -->
+    <script src="lib/jquery v3.7.1/jquery-3.7.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const activeUser = getCurrentUserSession();
+            if (activeUser && activeUser.fullname) {
+                document.getElementById('user-dashboard-title').textContent = `Welcome back, ${activeUser.fullname} 👋`;
+                if (activeUser.email) {
+                    document.getElementById('user-email-badge').textContent = activeUser.email;
+                }
+            }
+
+            // Calculate & Render dynamic purchase history from localStorage
+            const purchaseHistory = JSON.parse(localStorage.getItem('cm_purchase_history') || '[]');
+            const tbody = document.getElementById('history-table-body');
+
+            let baseTons = 45;
+            let baseSpent = 1100.00;
+            let baseCertCount = 3;
+
+            if (purchaseHistory.length > 0 && tbody) {
+                let rowsHtml = '';
+                purchaseHistory.forEach(order => {
+                    const priceVal = parseFloat(order.totalPrice.replace('$', '')) || 0;
+                    baseTons += order.tons;
+                    baseSpent += priceVal;
+                    baseCertCount += 1;
+
+                    rowsHtml += `
+                        <tr style="border-bottom: 1px solid #F1F5F9; background: #F0FDF4;">
+                            <td style="padding: 20px 16px;">
+                                <strong style="color: #111111; font-size: 1rem; display: block; font-weight: 700;">${order.product}</strong>
+                                <span style="font-size: 0.8rem; color: #087F5B; font-weight: 700;"><i class="bx bx-check-shield"></i> Verified Purchase • ${order.id}</span>
+                            </td>
+                            <td style="padding: 20px 16px; font-weight: 800; color: #111111;">${order.tons} tCO₂e</td>
+                            <td style="padding: 20px 16px; color: #64748B; font-weight: 500;">${order.date}</td>
+                            <td style="padding: 20px 16px; font-weight: 800; color: #087F5B;">${order.totalPrice}</td>
+                            <td style="padding: 20px 16px;">
+                                <span style="font-size: 0.78rem; font-weight: 700; color: #087F5B; background: #E8F5EF; padding: 4px 12px; border-radius: 20px; border: 1px solid #A7F3D0; display: inline-flex; align-items: center; gap: 6px;">
+                                    <i class="bx bxs-circle" style="font-size: 0.5rem; color: #087F5B;"></i> Active & Retired
+                                </span>
+                            </td>
+                            <td style="padding: 20px 16px; text-align: right;">
+                                <a href="#" onclick="alert('Downloading Official Serialized Audit Certificate PDF (${order.certificateId || 'CERT-2026'})...'); return false;" style="font-size: 0.82rem; font-weight: 700; color: #087F5B; text-decoration: none; background: #E8F5EF; border: 1.5px solid #A7F3D0; padding: 8px 16px; border-radius: 50px; display: inline-flex; align-items: center; gap: 6px;">
+                                    <i class="bx bx-download" style="font-size: 1rem;"></i> Certificate PDF
+                                </a>
+                            </td>
+                        </tr>
+                    `;
+                });
+                tbody.insertAdjacentHTML('afterbegin', rowsHtml);
+            }
+
+            // Update Dynamic Stat Counter Cards
+            document.getElementById('stat-total-tons').textContent = baseTons.toFixed(1);
+            document.getElementById('stat-trees-count').textContent = `~${(baseTons * 50).toLocaleString()} trees`;
+            document.getElementById('stat-total-spent').textContent = `$${baseSpent.toFixed(2)}`;
+            document.getElementById('stat-avg-cost').textContent = `$${(baseSpent / baseTons).toFixed(2)} / tCO₂e`;
+            document.getElementById('stat-cert-count').textContent = baseCertCount;
+        });
+    </script>
+</body>
+
+</html>

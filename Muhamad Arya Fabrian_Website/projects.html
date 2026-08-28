@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarbonMarket — Explore verified environmental projects certified by international independent auditors.">
+    <title>Verified Carbon Projects — CarbonMarket</title>
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="lib/Animate On Scroll v2.3.2/dist/aos.css">
+    <!-- Fancybox v5 Lightbox CSS -->
+    <link rel="stylesheet" href="lib/Fancybox v5.0.36/dist/fancybox/fancybox.css">
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="lib/swiperjs v11.1.5/swiper-bundle.min.css">
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="lib/boxicons v2.1.4/css/boxicons.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function () {
+            var u = localStorage.getItem('cm_current_user') || sessionStorage.getItem('cm_current_user');
+            if (u) document.write('<style>.nav-right { visibility: hidden; }</style>');
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">CM</a>
+            <span class="divider"></span>
+            <ul class="nav-links">
+                <li class="nav-item" data-menu="products"><a href="products.html">Products</a></li>
+                <li class="nav-item" data-menu="projects"><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="index.html#explanation">How It Works</a></li>
+                <li><a href="index.html#content">About Us</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="login.html" class="btn-login">Log In</a>
+            <a href="register.html" class="btn-register">Register</a>
+        </div>
+    </nav>
+
+    <!-- ================= MAIN PROJECTS SECTION ================= -->
+    <section class="projects-page-section">
+
+        <!-- Category Filter Bar -->
+        <div class="products-filter-bar" data-aos="fade-up" data-aos-duration="800">
+            <button class="products-filter-btn active" data-category="all">All Projects</button>
+            <button class="products-filter-btn" data-category="forestry">Forestry & Peatland</button>
+            <button class="products-filter-btn" data-category="renewable">Renewable Energy</button>
+            <button class="products-filter-btn" data-category="blue-carbon">Blue Carbon & Mangrove</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-page-grid">
+
+            <!-- Project 1 -->
+            <div class="project-page-card" data-category="forestry" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <div class="project-page-img-wrapper">
+                    <a href="assets/img/project-1.jpg" data-fancybox="gallery" data-caption="Kalimantan Peatland & Ecosystem Restoration">
+                        <img src="assets/img/project-1.jpg" alt="Kalimantan Peatland Restoration">
+                    </a>
+                    <span class="project-page-badge"><i class="bx bx-check-shield"></i> Verra VCS Certified</span>
+                </div>
+                <div class="project-page-content">
+                    <span class="project-page-location"><i class="bx bx-map"></i> South Kalimantan, Indonesia</span>
+                    <h3 class="project-page-title">Kalimantan Peatland & Ecosystem Restoration</h3>
+                    <p class="project-page-desc">Conserving over 120,000 hectares of critical tropical peat swamp forest, preventing massive carbon emissions and protecting endangered fauna habitats.</p>
+                    <div class="project-page-footer">
+                        <div class="project-page-stat">
+                            <span class="project-page-stat-val">500k tCO₂e</span>
+                            <span class="project-page-stat-lbl">Annual Offset</span>
+                        </div>
+                        <a href="project-detail.html?id=kalimantan" class="project-page-btn">View Details <i class="bx bx-right-arrow-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-page-card" data-category="renewable" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <div class="project-page-img-wrapper">
+                    <a href="assets/img/project-2.jpg" data-fancybox="gallery" data-caption="Sulawesi Wind Energy Power Generation">
+                        <img src="assets/img/project-2.jpg" alt="Sulawesi Wind Energy">
+                    </a>
+                    <span class="project-page-badge"><i class="bx bx-badge-check"></i> Gold Standard Verified</span>
+                </div>
+                <div class="project-page-content">
+                    <span class="project-page-location"><i class="bx bx-map"></i> Sidrap, South Sulawesi</span>
+                    <h3 class="project-page-title">Sulawesi Wind Energy Power Generation</h3>
+                    <p class="project-page-desc">Utility-scale wind turbine installation delivering 75 MW of clean, renewable electricity to local provincial grids, displacing fossil fuel energy generation.</p>
+                    <div class="project-page-footer">
+                        <div class="project-page-stat">
+                            <span class="project-page-stat-val">240k tCO₂e</span>
+                            <span class="project-page-stat-lbl">Annual Offset</span>
+                        </div>
+                        <a href="project-detail.html?id=sulawesi" class="project-page-btn">View Details <i class="bx bx-right-arrow-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-page-card" data-category="blue-carbon" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                <div class="project-page-img-wrapper">
+                    <a href="assets/img/mangrove.jpg" data-fancybox="gallery" data-caption="Java Coastal Mangrove Ecosystem Rehabilitation">
+                        <img src="assets/img/mangrove.jpg" alt="Java Mangrove Rehabilitation">
+                    </a>
+                    <span class="project-page-badge"><i class="bx bx-shield-alt-2"></i> Plan Vivo Verified</span>
+                </div>
+                <div class="project-page-content">
+                    <span class="project-page-location"><i class="bx bx-map"></i> Central Java Coast</span>
+                    <h3 class="project-page-title">Java Coastal Mangrove Ecosystem Rehabilitation</h3>
+                    <p class="project-page-desc">Restoring degraded coastal mangrove forests to sequester blue carbon at 4x the rate of terrestrial forests while creating coastal erosion defense barriers.</p>
+                    <div class="project-page-footer">
+                        <div class="project-page-stat">
+                            <span class="project-page-stat-val">180k tCO₂e</span>
+                            <span class="project-page-stat-lbl">Annual Offset</span>
+                        </div>
+                        <a href="project-detail.html?id=java" class="project-page-btn">View Details <i class="bx bx-right-arrow-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-page-card" data-category="renewable" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <div class="project-page-img-wrapper">
+                    <a href="assets/img/biomass.jpg" data-fancybox="gallery" data-caption="Solar Energy & Agricultural Biomass Initiative">
+                        <img src="assets/img/biomass.jpg" alt="Solar Energy & Biomass Initiative">
+                    </a>
+                    <span class="project-page-badge"><i class="bx bx-badge-check"></i> Gold Standard Verified</span>
+                </div>
+                <div class="project-page-content">
+                    <span class="project-page-location"><i class="bx bx-map"></i> Bali & Nusa Tenggara</span>
+                    <h3 class="project-page-title">Solar Energy & Agricultural Biomass Initiative</h3>
+                    <p class="project-page-desc">Hybrid solar array and agricultural waste-to-energy biomass conversion facility supplying clean power for local farming communities.</p>
+                    <div class="project-page-footer">
+                        <div class="project-page-stat">
+                            <span class="project-page-stat-val">120k tCO₂e</span>
+                            <span class="project-page-stat-lbl">Annual Offset</span>
+                        </div>
+                        <a href="project-detail.html?id=bali" class="project-page-btn">View Details <i class="bx bx-right-arrow-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-page-card" data-category="forestry" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <div class="project-page-img-wrapper">
+                    <a href="assets/img/rainforest.jpg" data-fancybox="gallery" data-caption="Sumatra Tropical Rainforest Bio-Diversity Shield">
+                        <img src="assets/img/rainforest.jpg" alt="Sumatra Rainforest Shield">
+                    </a>
+                    <span class="project-page-badge"><i class="bx bx-check-shield"></i> Verra CCB Certified</span>
+                </div>
+                <div class="project-page-content">
+                    <span class="project-page-location"><i class="bx bx-map"></i> Harapan Forest, Sumatra</span>
+                    <h3 class="project-page-title">Sumatra Tropical Rainforest Bio-Diversity Shield</h3>
+                    <p class="project-page-desc">Protecting high conservation value (HCV) primary rainforest against deforestation, preserving habitat for Sumatran tigers, elephants, and endemic flora.</p>
+                    <div class="project-page-footer">
+                        <div class="project-page-stat">
+                            <span class="project-page-stat-val">350k tCO₂e</span>
+                            <span class="project-page-stat-lbl">Annual Offset</span>
+                        </div>
+                        <a href="project-detail.html?id=sumatra" class="project-page-btn">View Details <i class="bx bx-right-arrow-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-page-card" data-category="renewable" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                <div class="project-page-img-wrapper">
+                    <a href="assets/img/solar-microgrid.jpg" data-fancybox="gallery" data-caption="Sumba Rural Solar Micro-Grid Electrification">
+                        <img src="assets/img/solar-microgrid.jpg" alt="Sumba Micro Grid Solar">
+                    </a>
+                    <span class="project-page-badge"><i class="bx bx-shield-quarter"></i> CDM Verified</span>
+                </div>
+                <div class="project-page-content">
+                    <span class="project-page-location"><i class="bx bx-map"></i> Sumba Island, NTT</span>
+                    <h3 class="project-page-title">Sumba Rural Solar Micro-Grid Electrification</h3>
+                    <p class="project-page-desc">Installing off-grid solar micro-grids across remote villages in Sumba Island, replacing kerosene lamps and diesel generators with 100% solar energy.</p>
+                    <div class="project-page-footer">
+                        <div class="project-page-stat">
+                            <span class="project-page-stat-val">95k tCO₂e</span>
+                            <span class="project-page-stat-lbl">Annual Offset</span>
+                        </div>
+                        <a href="project-detail.html?id=sumba" class="project-page-btn">View Details <i class="bx bx-right-arrow-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col footer-brand">
+                <a href="index.html" class="footer-logo">CM</a>
+                <p class="footer-tagline">Verified carbon credit trading solutions for a more sustainable future.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html#explanation">How It Works</a></li>
+                    <li><a href="index.html#content">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Account</h4>
+                <ul class="footer-links">
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="history.html">Activity & History</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CarbonMarket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Library Scripts -->
+    <script src="lib/Animate On Scroll v2.3.2/dist/aos.js"></script>
+    <script src="lib/Fancybox v5.0.36/dist/fancybox/fancybox.umd.js"></script>
+    <script src="lib/swiperjs v11.1.5/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

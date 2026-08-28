@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verified Environmental Project Case Study & Technical Impact Dossier.">
+    <title>Project Case Study & Technical Dossier — CarbonMarket</title>
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="lib/Animate On Scroll v2.3.2/dist/aos.css">
+    <!-- Fancybox v5 Lightbox CSS -->
+    <link rel="stylesheet" href="lib/Fancybox v5.0.36/dist/fancybox/fancybox.css">
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="lib/swiperjs v11.1.5/swiper-bundle.min.css">
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="lib/boxicons v2.1.4/css/boxicons.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function () {
+            var u = localStorage.getItem('cm_current_user') || sessionStorage.getItem('cm_current_user');
+            if (u) document.write('<style>.nav-right { visibility: hidden; }</style>');
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">CM</a>
+            <span class="divider"></span>
+            <ul class="nav-links">
+                <li class="nav-item" data-menu="products"><a href="products.html">Products</a></li>
+                <li class="nav-item" data-menu="projects"><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="index.html#explanation">How It Works</a></li>
+                <li><a href="index.html#content">About Us</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="login.html" class="btn-login">Log In</a>
+            <a href="register.html" class="btn-register">Register</a>
+        </div>
+    </nav>
+
+    <!-- ================= PROJECT CASE STUDY CONTENT ================= -->
+    <section style="padding: 120px 8% 100px 8%; background-color: #F9FBF9; min-height: 100vh;">
+        <div style="max-width: 1160px; margin: 0 auto;">
+            
+            <!-- Breadcrumb Navigation -->
+            <div style="margin-bottom: 24px; font-size: 0.85rem; color: #64748B;" data-aos="fade-up" data-aos-duration="800">
+                <a href="index.html" style="color: #64748B; text-decoration: none;">Home</a> &nbsp;/&nbsp; 
+                <a href="projects.html" style="color: #64748B; text-decoration: none;">Projects</a> &nbsp;/&nbsp; 
+                <span id="detail-breadcrumb-title" style="color: #111111; font-weight: 600;">Kalimantan Peatland Restoration</span>
+            </div>
+
+            <!-- Project Title Header -->
+            <div style="margin-bottom: 30px;" data-aos="fade-up" data-aos-duration="900">
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px;">
+                    <span id="detail-badge" style="font-size: 0.78rem; font-weight: 700; color: #087F5B; background: #E8F5EF; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em;"><i class="bx bx-check-shield"></i> Verra VCS Certified #1428</span>
+                    <span id="detail-location" style="font-size: 0.78rem; font-weight: 600; color: #475569; background: #F1F5F9; padding: 6px 14px; border-radius: 20px; border: 1px solid #CBD5E1;"><i class="bx bx-map"></i> Central Kalimantan, Indonesia</span>
+                </div>
+                <h1 id="detail-title" style="font-size: clamp(2.2rem, 4.5vw, 3.2rem); font-weight: 800; color: #111111; line-height: 1.15; letter-spacing: -0.03em; max-width: 900px;">
+                    Kalimantan Peatland & Ecosystem Restoration
+                </h1>
+            </div>
+
+            <!-- Full-Width Exhibition Gallery Banner -->
+            <div style="margin-bottom: 60px; border-radius: 28px; overflow: hidden; border: 1.5px solid #111111; box-shadow: 0 16px 36px rgba(0,0,0,0.06);" data-aos="fade-up" data-aos-duration="900">
+                <a id="detail-hero-link" href="assets/img/project-1.jpg" data-fancybox="gallery" data-caption="Verified Environmental Project Area" style="display: block; width: 100%; height: 440px; position: relative;">
+                    <img id="detail-hero-img" src="assets/img/project-1.jpg" alt="Project Image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </a>
+            </div>
+
+            <!-- 2-Column Content Layout (Narrative Left + Dossier Right) -->
+            <div style="display: flex; gap: 60px; align-items: flex-start; flex-wrap: wrap;">
+                
+                <!-- Left Narrative Column (65%) -->
+                <div style="flex: 1.5; min-width: 320px;" data-aos="fade-up" data-aos-duration="900">
+                    <h2 style="font-size: 1.6rem; font-weight: 700; color: #111111; margin-bottom: 20px; letter-spacing: -0.02em;">Executive Project Overview</h2>
+                    <p id="detail-overview1" style="font-size: 1.05rem; color: #475569; line-height: 1.75; margin-bottom: 20px;">The Kalimantan Peatland Restoration project conserves over 149,000 hectares of critical tropical peat swamp forest in Central Kalimantan, Indonesia.</p>
+                    <p id="detail-overview2" style="font-size: 1.05rem; color: #475569; line-height: 1.75; margin-bottom: 36px;">By re-wetting drained canals, enforcing strict community forest fire prevention protocols, and stopping land clearing, this project prevents millions of metric tons of greenhouse gas emissions annually.</p>
+
+                    <!-- Environmental Outcomes Grid -->
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111111; margin-bottom: 20px;">Verified Environmental Impact Metrics</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 40px;">
+                        <div style="background: #ffffff; border: 1.5px solid #111111; border-radius: 18px; padding: 20px;">
+                            <span style="font-size: 0.78rem; font-weight: 700; color: #64748B; text-transform: uppercase; display: block; margin-bottom: 4px;">Annual CO₂ Offset</span>
+                            <span id="detail-annual-offset" style="font-size: 1.6rem; font-weight: 800; color: #111111;">500,000 tCO₂e</span>
+                        </div>
+                        <div style="background: #ffffff; border: 1.5px solid #111111; border-radius: 18px; padding: 20px;">
+                            <span style="font-size: 0.78rem; font-weight: 700; color: #64748B; text-transform: uppercase; display: block; margin-bottom: 4px;">Protected Territory</span>
+                            <span id="detail-protected-area" style="font-size: 1.6rem; font-weight: 800; color: #111111;">149,000 Ha</span>
+                        </div>
+                        <div style="background: #ffffff; border: 1.5px solid #111111; border-radius: 18px; padding: 20px;">
+                            <span style="font-size: 0.78rem; font-weight: 700; color: #64748B; text-transform: uppercase; display: block; margin-bottom: 4px;">Monitoring System</span>
+                            <span id="detail-monitoring" style="font-size: 1.6rem; font-weight: 800; color: #087F5B;">IoT Satellite</span>
+                        </div>
+                    </div>
+
+                    <!-- Kononenko Row Hover Documentation Index -->
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #111111; margin-bottom: 16px;">Audit Reports & Project Documentation</h3>
+                    <div class="kononenko-list-wrapper" style="margin-top: 10px;">
+                        <a href="#" class="kononenko-row">
+                            <span class="kononenko-row-title">Project Design Document (PDD)</span>
+                            <span class="kononenko-row-meta">Verra VCS Standard v4.3</span>
+                            <i class="bx bx-right-arrow-alt kononenko-row-arrow"></i>
+                        </a>
+                        <a href="#" class="kononenko-row">
+                            <span class="kononenko-row-title">Third-Party Verification Statement</span>
+                            <span class="kononenko-row-meta">Independent Auditor Statement</span>
+                            <i class="bx bx-right-arrow-alt kononenko-row-arrow"></i>
+                        </a>
+                        <a href="#" class="kononenko-row">
+                            <span class="kononenko-row-title">GIS Satellite Carbon Density Map</span>
+                            <span class="kononenko-row-meta">Updated Q4 2025</span>
+                            <i class="bx bx-right-arrow-alt kononenko-row-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Dossier & Partner Info Column (35%) -->
+                <div style="flex: 1; min-width: 300px;" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+                    <div style="background: #ffffff; border: 1.5px solid #111111; border-radius: 24px; padding: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
+                        <h3 style="font-size: 1.2rem; font-weight: 800; color: #111111; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid #F1F5F9;">Project Dossier Specs</h3>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px;">
+                            <div>
+                                <span style="font-size: 0.78rem; color: #64748B; font-weight: 600; display: block;">Standard Registry</span>
+                                <strong id="detail-standard" style="font-size: 0.95rem; color: #111111;">Verra VCS (Verified Carbon Standard)</strong>
+                            </div>
+                            <div>
+                                <span style="font-size: 0.78rem; color: #64748B; font-weight: 600; display: block;">Project Registry ID</span>
+                                <strong id="detail-registry-id" style="font-size: 0.95rem; color: #111111;">VCS-1428-IDN</strong>
+                            </div>
+                            <div>
+                                <span style="font-size: 0.78rem; color: #64748B; font-weight: 600; display: block;">Audit Body</span>
+                                <strong id="detail-audit-body" style="font-size: 0.95rem; color: #111111;">SGS International Verification</strong>
+                            </div>
+                            <div>
+                                <span style="font-size: 0.78rem; color: #64748B; font-weight: 600; display: block;">Project Developer</span>
+                                <strong id="detail-developer" style="font-size: 0.95rem; color: #111111;">PT Restorasi Ekosistem Indonesia</strong>
+                            </div>
+                            <div>
+                                <span style="font-size: 0.78rem; color: #64748B; font-weight: 600; display: block;">Vintage Cycle</span>
+                                <strong id="detail-vintage" style="font-size: 0.95rem; color: #111111;">2023 &mdash; 2025 Vintage</strong>
+                            </div>
+                        </div>
+
+                        <a href="#" class="mja-btn-action" style="display: flex; gap: 8px; justify-content: center; width: 100%; padding: 14px 24px; margin-bottom: 12px; font-size: 0.92rem;"><i class="bx bx-download"></i> Request Project Dossier (PDF)</a>
+                        <a href="#" style="display: flex; gap: 8px; justify-content: center; align-items: center; width: 100%; padding: 12px 24px; background: #F1F5F9; color: #111111; font-weight: 700; font-size: 0.88rem; border-radius: 50px; text-decoration: none; border: 1px solid #CBD5E1;"><i class="bx bx-envelope"></i> Contact Project Partner</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col footer-brand">
+                <a href="index.html" class="footer-logo">CM</a>
+                <p class="footer-tagline">Verified carbon credit trading solutions for a more sustainable future.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html#explanation">How It Works</a></li>
+                    <li><a href="index.html#content">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Account</h4>
+                <ul class="footer-links">
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="history.html">Activity & History</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CarbonMarket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Library Scripts -->
+    <script src="lib/Animate On Scroll v2.3.2/dist/aos.js"></script>
+    <script src="lib/Fancybox v5.0.36/dist/fancybox/fancybox.umd.js"></script>
+    <script src="lib/swiperjs v11.1.5/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <!-- Dynamic Project Detail Loader Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectsData = {
+                'kalimantan': {
+                    title: 'Kalimantan Peatland & Ecosystem Restoration',
+                    badge: '<i class="bx bx-check-shield"></i> Verra VCS Certified #1428',
+                    location: '<i class="bx bx-map"></i> South Kalimantan, Indonesia',
+                    image: 'assets/img/project-1.jpg',
+                    annualOffset: '500,000 tCO₂e',
+                    protectedArea: '149,000 Hectares',
+                    monitoring: 'IoT Satellite',
+                    overview1: 'The Kalimantan Peatland Restoration project conserves over 149,000 hectares of critical tropical peat swamp forest in Central Kalimantan, Indonesia. Tropical peatlands represent one of planet Earth\'s most concentrated terrestrial carbon sinks, storing up to 10 times more carbon per hectare than mineral-soil rainforests.',
+                    overview2: 'By re-wetting drained canals, enforcing strict community forest fire prevention protocols, and stopping land clearing, this project prevents millions of metric tons of greenhouse gas emissions annually while protecting habitats for endangered species including the Bornean Orangutan (Pongo pygmaeus).',
+                    standard: 'Verra VCS (Verified Carbon Standard)',
+                    registryId: 'VCS-1428-IDN',
+                    auditBody: 'SGS International Verification',
+                    developer: 'PT Restorasi Ekosistem Indonesia',
+                    vintage: '2023 — 2025 Vintage'
+                },
+                'sulawesi': {
+                    title: 'Sulawesi Wind Energy Power Generation',
+                    badge: '<i class="bx bx-badge-check"></i> Gold Standard Verified #892',
+                    location: '<i class="bx bx-map"></i> Sidrap, South Sulawesi, Indonesia',
+                    image: 'assets/img/project-2.jpg',
+                    annualOffset: '240,000 tCO₂e',
+                    protectedArea: '70 MW Capacity',
+                    monitoring: 'SCADA Telemetry',
+                    overview1: 'The Sulawesi Wind Energy project operates 30 utility-scale wind turbines in Sidrap, South Sulawesi, generating clean renewable electricity for over 70,000 regional households. By displacing coal-fired thermal grid power, this initiative reduces grid emission factors across Eastern Indonesia.',
+                    overview2: 'With continuous real-time IoT power telemetry and community micro-finance funding, the project empowers local rural economies while supporting Indonesia\'s national 23% renewable energy transition milestone.',
+                    standard: 'Gold Standard for the Global Goals',
+                    registryId: 'GS-892-IDN',
+                    auditBody: 'TÜV SÜD International Audit',
+                    developer: 'UPC Sidrap Bayu Energi',
+                    vintage: '2024 — 2025 Vintage'
+                },
+                'java': {
+                    title: 'Java Coastal Mangrove Ecosystem Rehabilitation',
+                    badge: '<i class="bx bx-shield-alt-2"></i> Plan Vivo Verified #304',
+                    location: '<i class="bx bx-map"></i> Central Java Coast, Indonesia',
+                    image: 'assets/img/mangrove.jpg',
+                    annualOffset: '180,000 tCO₂e',
+                    protectedArea: '35,000 Hectares',
+                    monitoring: 'LiDAR Mapping',
+                    overview1: 'The Java Coastal Mangrove project restores degraded coastal wetlands along the northern coast of Central Java. Mangrove ecosystems capture and store "blue carbon" in root biomass and coastal sediment at up to 4 to 5 times the rate of mature upland rainforests.',
+                    overview2: 'Beyond carbon sequestration, the restored mangrove belt serves as a natural surge defense against coastal erosion, tsunami risks, and rising sea levels, while restoring coastal fish nurseries that support local artisanal fishing cooperatives.',
+                    standard: 'Plan Vivo Standard Foundation',
+                    registryId: 'PV-304-IDN',
+                    auditBody: 'Det Norske Veritas (DNV)',
+                    developer: 'Yayasan Mangrove Nusantara',
+                    vintage: '2023 — 2025 Vintage'
+                },
+                'bali': {
+                    title: 'Solar Energy & Agricultural Biomass Initiative',
+                    badge: '<i class="bx bx-badge-check"></i> Gold Standard Verified #511',
+                    location: '<i class="bx bx-map"></i> Bali & Nusa Tenggara, Indonesia',
+                    image: 'assets/img/biomass.jpg',
+                    annualOffset: '120,000 tCO₂e',
+                    protectedArea: '25 Local Grids',
+                    monitoring: 'Smart Meter IoT',
+                    overview1: 'This hybrid clean energy project integrates rooftop solar photovoltaic arrays and agricultural crop waste biomass conversion units across Bali and neighboring Nusa Tenggara islands. It converts rice husks and coconut shells into clean thermal energy for rural processing plants.',
+                    overview2: 'The project replaces diesel generator usage, eliminates open agricultural waste burning, and creates sustainable green jobs in agro-forestry logistics across 25 rural farming communities.',
+                    standard: 'Gold Standard for Climate & Development',
+                    registryId: 'GS-511-IDN',
+                    auditBody: 'Bureau Veritas Certification',
+                    developer: 'Bali Clean Energy Solutions',
+                    vintage: '2024 — 2025 Vintage'
+                },
+                'sumatra': {
+                    title: 'Sumatra Tropical Rainforest Bio-Diversity Shield',
+                    badge: '<i class="bx bx-check-shield"></i> Verra CCB Certified Gold',
+                    location: '<i class="bx bx-map"></i> Harapan Forest, Sumatra, Indonesia',
+                    image: 'assets/img/rainforest.jpg',
+                    annualOffset: '350,000 tCO₂e',
+                    protectedArea: '98,000 Hectares',
+                    monitoring: 'Bio-Acoustic AI',
+                    overview1: 'Located in the bio-diverse Harapan ecosystem of Sumatra, this forest conservation project safeguards 98,000 hectares of primary lowland rainforest against illegal logging, palm oil expansion, and poaching.',
+                    overview2: 'Equipped with AI bio-acoustic listening sensors and ranger patrols, the project secures sanctuary habitat for Sumatran tigers, Asian elephants, and over 300 bird species, while supporting forest-edge indigenous Batin Sembilan communities.',
+                    standard: 'Verra VCS + CCB Gold Standard',
+                    registryId: 'VCS-9801-IDN',
+                    auditBody: 'SGS Earth & Environment Audit',
+                    developer: 'PT Restorasi Ekosistem Indonesia Harapan',
+                    vintage: '2023 — 2025 Vintage'
+                },
+                'sumba': {
+                    title: 'Sumba Rural Solar Micro-Grid Electrification',
+                    badge: '<i class="bx bx-shield-quarter"></i> CDM Certified #6120',
+                    location: '<i class="bx bx-map"></i> Sumba Island, NTT, Indonesia',
+                    image: 'assets/img/solar-microgrid.jpg',
+                    annualOffset: '95,000 tCO₂e',
+                    protectedArea: '40 Rural Grids',
+                    monitoring: 'Remote Telemetry',
+                    overview1: 'Sumba Iconic Island electrification initiative installs 40 solar PV micro-grids and battery storage systems across off-grid villages in Eastern Sumba. It replaces dangerous kerosene lamps and expensive diesel mini-generators with 100% clean solar energy.',
+                    overview2: 'Providing 24/7 electricity access for rural health clinics, schools, and small businesses, the project directly lowers household energy costs while preventing toxic indoor air pollution and carbon emissions.',
+                    standard: 'UNFCCC Clean Development Mechanism (CDM)',
+                    registryId: 'CDM-6120-IDN',
+                    auditBody: 'ERM Certification International',
+                    developer: 'Sumba Energi Terbarukan',
+                    vintage: '2024 — 2025 Vintage'
+                }
+            };
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id') || 'kalimantan';
+            const data = projectsData[projectId] || projectsData['kalimantan'];
+
+            document.getElementById('detail-breadcrumb-title').textContent = data.title;
+            document.getElementById('detail-badge').innerHTML = data.badge;
+            document.getElementById('detail-location').innerHTML = data.location;
+            document.getElementById('detail-title').textContent = data.title;
+            document.getElementById('detail-hero-link').href = data.image;
+            document.getElementById('detail-hero-img').src = data.image;
+            document.getElementById('detail-hero-img').alt = data.title;
+            document.getElementById('detail-overview1').textContent = data.overview1;
+            document.getElementById('detail-overview2').textContent = data.overview2;
+            document.getElementById('detail-annual-offset').textContent = data.annualOffset;
+            document.getElementById('detail-protected-area').textContent = data.protectedArea;
+            document.getElementById('detail-monitoring').textContent = data.monitoring;
+            document.getElementById('detail-standard').textContent = data.standard;
+            document.getElementById('detail-registry-id').textContent = data.registryId;
+            document.getElementById('detail-audit-body').textContent = data.auditBody;
+            document.getElementById('detail-developer').textContent = data.developer;
+            document.getElementById('detail-vintage').textContent = data.vintage;
+        });
+    </script>
+</body>
+
+</html>
